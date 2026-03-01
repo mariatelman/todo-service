@@ -18,11 +18,6 @@ target/
 *.iml
 *.ipr
 
-### AI helper files ###
-CLAUDE.md
-.claude/
-
-
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
