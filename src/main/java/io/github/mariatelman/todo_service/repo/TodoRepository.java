@@ -1,7 +1,5 @@
 package io.github.mariatelman.todo_service.repo;
 
-
-import io.github.mariatelman.todo_service.domain.model.TodoStatus;
 import io.github.mariatelman.todo_service.domain.model.TodoItem;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
