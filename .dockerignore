@@ -1,0 +1,17 @@
+target/
+.git/
+.gitignore
+.gitattributes
+
+.idea/
+*.iml
+
+mvnw
+mvnw.cmd
+
+.DS_Store
+*.md
+.claude/
+
+Dockerfile
+.dockerignore

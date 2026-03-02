@@ -27,3 +27,9 @@ logging:
     root: INFO
     io.github.mariatelman: INFO
     org.springframework: WARN
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health

@@ -43,3 +43,13 @@ The service starts on [http://localhost:8080](http://localhost:8080).
 
 - API docs: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 - H2 console: [http://localhost:8080/h2-console](http://localhost:8080/h2-console) (JDBC URL: `jdbc:h2:mem:testdb`)
+
+## Run with Docker
+
+```bash
+docker build -t todo-service .
+docker run -p 8080:8080 todo-service
+```
+
+- Health check: [http://localhost:8080/actuator/health](http://localhost:8080/actuator/health)
+- Swagger UI: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
