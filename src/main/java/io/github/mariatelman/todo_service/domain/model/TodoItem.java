@@ -66,7 +66,7 @@ public class TodoItem {
   public void setNotDone(final Instant instant) {
     ensureMutable();
     if (dueDateBefore(instant)) {
-      throw new TodoModificationNotAllowedException("Cannot update past due item");
+      throw new TodoModificationNotAllowedException(this);
     }
     this.status = TodoStatus.NOT_DONE;
     this.doneAt = null;
@@ -75,7 +75,7 @@ public class TodoItem {
   public void setDone(final Instant doneAt) {
     ensureMutable();
     if (dueDateBefore(doneAt)) {
-      throw new TodoModificationNotAllowedException("Cannot update past due item");
+      throw new TodoModificationNotAllowedException(this);
     }
     if (status != TodoStatus.DONE) {
       this.status = TodoStatus.DONE;
@@ -125,7 +125,7 @@ public class TodoItem {
 
   private void ensureMutable() {
     if (isPastDue()) {
-      throw new TodoModificationNotAllowedException("Cannot update past due item");
+      throw new TodoModificationNotAllowedException(this);
     }
   }
 
